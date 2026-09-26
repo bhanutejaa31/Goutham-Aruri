@@ -15,3 +15,8 @@
 {"timestamp": 1790410945.6956544, "incident_id": "INC-817120EF", "action": "REMEDIATION_EXECUTED", "details": {"sandbox": true, "production_simulation": true}}
 {"timestamp": 1790410968.5692673, "incident_id": "INC-8234A699", "action": "INVESTIGATION_COMPLETED", "details": {"root_cause": "bad_deployment", "confidence": 0.9, "evidence_gate": {"sufficient": true, "threshold": 0.72, "reason": "Top hypothesis has enough independent evidence."}}}
 {"timestamp": 1790411068.8513865, "incident_id": "INC-072A6429", "action": "INVESTIGATION_COMPLETED", "details": {"root_cause": "bad_deployment", "confidence": 0.9, "evidence_gate": {"sufficient": true, "threshold": 0.72, "reason": "Top hypothesis has enough independent evidence."}}}
+{"timestamp": 1790412571.548684, "incident_id": "INC-C9934A94", "action": "INVESTIGATION_COMPLETED", "details": {"root_cause": "bad_deployment", "confidence": 0.9, "evidence_gate": {"sufficient": true, "threshold": 0.72, "reason": "Top hypothesis has enough independent evidence."}}}
+{"timestamp": 1790412575.349494, "incident_id": "INC-C9934A94", "action": "HUMAN_APPROVAL", "details": {"approved": true, "risk": "HIGH"}}
+{"timestamp": 1790412575.349494, "incident_id": "INC-C9934A94", "action": "SANDBOX_EXECUTION", "details": {"action": "rollback", "target": "checkout-service"}}
+{"timestamp": 1790412575.349494, "incident_id": "INC-C9934A94", "action": "VERIFICATION_PASSED", "details": {"success": true, "before_error_rate": 24.0, "after_error_rate": 1.2, "before_latency_ms": 1400, "after_latency_ms": 210, "message": "Synthetic health probes recovered after remediation."}}
+{"timestamp": 1790412575.3561058, "incident_id": "INC-C9934A94", "action": "REMEDIATION_EXECUTED", "details": {"sandbox": true, "production_simulation": true}}
