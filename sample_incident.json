@@ -1,0 +1,5 @@
+{
+  "scenario": "bad_deployment",
+  "expected_root_cause": "bad_deployment",
+  "demo_flow": ["ingest", "correlate", "hypothesize", "test", "sandbox", "approve", "verify", "audit"]
+}

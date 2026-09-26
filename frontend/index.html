@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AegisOps</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="shell">
+<header>
+  <div>
+    <div class="brand">AEGIS<span>OPS</span></div>
+    <div class="sub">Autonomous Incident Diagnosis & Safe Remediation</div>
+  </div>
+  <div class="pill green">● SANDBOX MODE</div>
+</header>
+
+<section class="hero">
+  <div><h1>Production incidents, investigated like an SRE.</h1>
+  <p>Evidence → hypotheses → counterfactual tests → safe remediation → verification.</p></div>
+  <button onclick="runReplay()" class="primary">▶ Run Incident Replay</button>
+</section>
+
+<div class="grid">
+ <aside class="panel">
+   <h3>Incident Scenarios</h3>
+   <div id="scenarios"></div>
+   <button class="secondary" onclick="runBenchmark()">Run Benchmark</button>
+   <div id="benchmark"></div>
+ </aside>
+
+ <main>
+   <div id="empty" class="panel empty">
+     <div class="orb">◈</div>
+     <h2>Ready for investigation</h2>
+     <p>Choose an incident replay to start the multi-agent investigation.</p>
+   </div>
+
+   <div id="dashboard" style="display:none">
+    <div class="panel statusbar">
+      <div><span class="danger">●</span> <b id="incTitle"></b><br><small id="incId"></small></div>
+      <div class="right"><span id="status" class="pill"></span></div>
+    </div>
+
+    <div class="cards">
+      <div class="panel metric"><small>ROOT CAUSE CONFIDENCE</small><strong id="confidence"></strong></div>
+      <div class="panel metric"><small>AGENTS</small><strong id="agentCount"></strong></div>
+      <div class="panel metric"><small>TELEMETRY EVENTS</small><strong id="events"></strong></div>
+      <div class="panel metric"><small>RISK GATE</small><strong id="risk"></strong></div>
+    </div>
+
+    <div class="panel">
+      <h3>◉ Causal Investigation</h3>
+      <div id="rootCause" class="root"></div>
+      <div id="hypotheses"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Timeline</h3>
+      <div id="timeline" class="timeline"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Service Dependency Graph</h3>
+      <div id="graph" class="graph"></div>
+    </div>
+
+    <div class="panel remediation">
+      <h3>⚡ Remediation Plan</h3>
+      <div id="remediation"></div>
+      <div id="approval"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Audit Trail</h3>
+      <div id="audit" class="audit"></div>
+    </div>
+   </div>
+ </main>
+</div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
